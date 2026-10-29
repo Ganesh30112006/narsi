@@ -1,0 +1,22 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  padding-top: var(--space-5);
+}
+
+.footerActions {
+  display: flex;
+  gap: var(--space-2);
+  margin-left: auto;
+}
+
+.note {
+  margin-top: var(--space-6);
+}
+
+.queue {
+  margin-top: var(--space-8);
+}

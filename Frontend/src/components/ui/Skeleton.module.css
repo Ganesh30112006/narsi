@@ -1,0 +1,23 @@
+.skeleton {
+  display: block;
+  max-width: 100%;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(90deg, var(--surface-sunken) 0%, var(--surface-hover) 50%, var(--surface-sunken) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}

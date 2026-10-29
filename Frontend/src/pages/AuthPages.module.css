@@ -1,0 +1,120 @@
+.title {
+  font-size: var(--text-xl);
+}
+
+.subtitle {
+  margin-top: var(--space-2);
+  color: var(--text-secondary);
+}
+
+.notice {
+  margin-top: var(--space-6);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  margin-top: var(--space-8);
+}
+
+.form button[type='submit'] {
+  margin-top: var(--space-2);
+  height: 40px;
+}
+
+.secondaryAction {
+  margin-top: var(--space-6);
+  font-size: var(--text-sm);
+  text-align: center;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.successIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: var(--space-5);
+  border-radius: var(--radius-full);
+  background: var(--success-soft);
+  color: var(--success);
+}
+
+.demo {
+  margin-top: var(--space-10);
+  padding: var(--space-4);
+  border: 1px dashed var(--warning-border);
+  border-radius: var(--radius-md);
+  background: var(--warning-soft);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.demo p + p {
+  margin-top: var(--space-1);
+}
+
+.demoTitle {
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+}
+
+.demo code {
+  overflow-wrap: anywhere;
+}
+
+/* Standalone pages (unauthorized / not found) */
+.standalone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: var(--space-10) var(--space-6);
+  text-align: center;
+}
+
+.standaloneFull {
+  min-height: 100vh;
+}
+
+.code {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.codeWithIcon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: var(--space-8);
+  text-transform: uppercase;
+}
+
+.standaloneTitle {
+  margin-top: var(--space-3);
+  font-size: var(--text-xl);
+}
+
+.standaloneText {
+  max-width: 420px;
+  margin-top: var(--space-2);
+  color: var(--text-secondary);
+}
+
+.standaloneActions {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--space-8);
+}

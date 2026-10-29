@@ -1,0 +1,62 @@
+.activity {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.activityItem {
+  display: grid;
+  grid-template-columns: 8px minmax(0, 1fr);
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--divider);
+}
+
+.activityItem:last-child {
+  border-bottom: 0;
+}
+
+.activityDot {
+  width: 6px;
+  height: 6px;
+  margin-top: 8px;
+  border-radius: var(--radius-full);
+  background: var(--border-strong);
+}
+
+.activityDot[data-result='FAILURE'],
+.activityDot[data-result='DENIED'] {
+  background: var(--danger);
+}
+
+.activityBody {
+  min-width: 0;
+}
+
+.activityAction {
+  font-weight: var(--weight-medium);
+  overflow-wrap: anywhere;
+}
+
+.activitySeparator {
+  color: var(--text-muted);
+}
+
+.activityDocument {
+  color: var(--text-secondary);
+  font-weight: var(--weight-regular);
+}
+
+a.activityDocument:hover {
+  color: var(--accent-text);
+}
+
+.activityResult {
+  color: var(--danger);
+}
+
+.activityMeta {
+  margin-top: 2px;
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}

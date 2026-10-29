@@ -1,0 +1,107 @@
+[project]
+name = "govpii-guard-backend"
+version = "0.1.0"
+description = "GovPII Guard — detection of government-issued PII embedded in documents and data."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn[standard]>=0.32,<1",
+  "pydantic>=2.9,<3",
+  "pydantic-settings>=2.6,<3",
+  "email-validator>=2.2,<3",
+  "sqlalchemy>=2.0.36,<2.1",
+  "alembic>=1.14,<2",
+  "psycopg[binary]>=3.2,<4",
+  "argon2-cffi>=23.1",
+  "pyjwt>=2.9,<3",
+  "python-multipart>=0.0.12",
+  "celery>=5.4,<6",
+  "pymupdf>=1.24,<2",
+  "python-docx>=1.1,<2",
+  "openpyxl>=3.1,<4",
+  "pandas>=2.2,<3",
+  "defusedxml>=0.7,<1",
+  "pillow>=11,<12",
+  "pytesseract>=0.3.13,<1",
+  "spacy>=3.8,<4",
+  # Photos, QR codes and barcodes, signatures (processing/visual). Optional at runtime: without it, scans skip them.
+  "opencv-python-headless>=4.10,<5",
+  "onnxruntime-directml>=1.20; platform_system == 'Windows'",
+  "onnxruntime>=1.20; platform_system != 'Windows'",
+  # Runtime dependencies of rapidocr_onnxruntime (PP-OCR), which is installed separately with --no-deps (README).
+  "pyclipper>=1.3",
+  "shapely>=2.0",
+  "pyyaml>=6.0",
+  "six>=1.16",
+  # Digital signatures in PDFs, checked offline against the CCA India roots (processing/authenticity).
+  "pyhanko>=0.25",
+  # Reads Aadhaar Secure QR codes so their UIDAI signature can be checked (processing/authenticity/aadhaar_qr.py).
+  "zxing-cpp>=2.2,<4",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3,<9",
+  "httpx>=0.27,<1",
+  "ruff>=0.8",
+  "mypy>=1.13",
+  "types-defusedxml",
+  "pandas-stubs",
+]
+
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = [
+  "ocr: requires the Tesseract binary",
+  "ner: requires the spaCy English model",
+  "local_data: runs on real documents in a local folder that is never committed (skipped when absent)",
+]
+filterwarnings = ["ignore::DeprecationWarning:celery.*"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S", "SIM", "RUF"]
+ignore = ["S101", "B008", "RUF012", "RUF001", "RUF002", "RUF003"]  # RUF00x: intentional typography (—, ·, →) in user-facing text
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S105", "S106", "S311"]
+"scripts/**" = ["S311"]
+"migrations/**" = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+plugins = ["pydantic.mypy"]
+ignore_missing_imports = true
+exclude = ["migrations/", "tests/", "scripts/"]
+
+# PyMuPDF and Celery don't ship complete type information; only these modules call them directly.
+[[tool.mypy.overrides]]
+module = [
+  "app.processing.extractor.pdf",
+  "app.processing.redaction.pdf",
+  "app.processing.rendering.page_images",
+  "app.processing.reporting.exporters",
+  "app.processing.visual.detector",
+  "app.utils.files",
+]
+disallow_untyped_calls = false
+
+[[tool.mypy.overrides]]
+module = ["app.workers.*"]
+disallow_untyped_decorators = false
+
+[tool.setuptools.package-data]
+"app.processing.authenticity" = ["trust/*.pem"]

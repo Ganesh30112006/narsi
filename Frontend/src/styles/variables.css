@@ -1,0 +1,294 @@
+/*
+ * GovPII Guard design tokens.
+ * Components must reference these tokens — never raw color values.
+ */
+
+:root {
+  /* Surfaces */
+  --bg-primary: #fafaf9;
+  --bg-secondary: #f4f3f1;
+  --surface: #ffffff;
+  --surface-hover: #f6f5f3;
+  --surface-sunken: #f1f0ee;
+  --surface-overlay: rgba(28, 25, 23, 0.32);
+
+  /* Lines */
+  --border: #e6e4e0;
+  --border-strong: #d4d1cc;
+  --divider: #eeece9;
+
+  /* Text */
+  --text-primary: #1c1917;
+  --text-secondary: #57534e;
+  --text-muted: #6f6a64;
+  --text-inverse: #ffffff;
+
+  /* Accent */
+  --accent: #2e5aac;
+  --accent-hover: #264c93;
+  --accent-soft: #edf2fb;
+  --accent-border: #c7d5f0;
+  --accent-text: #2a519b;
+
+  /* Status */
+  --success: #1e7a4c;
+  --success-soft: #eaf5ee;
+  --success-border: #bfe0cc;
+  --warning: #8f5400;
+  --warning-soft: #fdf4e3;
+  --warning-border: #f0d7a6;
+  --danger: #b42318;
+  --danger-hover: #9a1e14;
+  --danger-soft: #fdeeec;
+  --danger-border: #f3c4bf;
+  --neutral-soft: #f1f0ee;
+  --neutral-border: #dedbd6;
+
+  /* Charts (single-series magnitude uses the accent) */
+  --chart-bar: #4a73c0;
+  --chart-bar-hover: #2e5aac;
+  --chart-track: #f1f0ee;
+  --chart-high: #c2410c;
+  --chart-medium: #d69e2e;
+  --chart-low: #a8a29e;
+
+  /* PII category highlight hues — restrained, distinguishable */
+  --pii-aadhaar: #b45309;
+  --pii-aadhaar-vid: #c2410c;
+  --pii-pan: #2e5aac;
+  --pii-passport: #6d4bb8;
+  --pii-driving-license: #0f766e;
+  --pii-voter-id: #be3a5c;
+  --pii-phone: #3f7d20;
+  --pii-email: #0e7490;
+  --pii-name: #57534e;
+  --pii-address: #8a5a2b;
+  --pii-date-of-birth: #7a5c99;
+  --pii-aadhaar-enrolment: #9a6b1f;
+  --pii-roll-number: #4f6f8f;
+  --pii-place-of-birth: #6b7a3a;
+  --pii-identification-mark: #8f4f6b;
+  --pii-photo: #6b5b95;
+  --pii-qr-code: #3d6b5a;
+  --pii-signature: #7a5c3e;
+
+  /* Typography */
+  --font-sans:
+    'Inter Variable', 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, 'SFMono-Regular', 'Cascadia Mono', Menlo, Consolas, monospace;
+
+  --text-xs: 0.75rem; /* 12 */
+  --text-sm: 0.8125rem; /* 13 */
+  --text-base: 0.875rem; /* 14 */
+  --text-md: 0.9375rem; /* 15 */
+  --text-lg: 1.0625rem; /* 17 */
+  --text-xl: 1.375rem; /* 22 */
+  --text-2xl: 1.75rem; /* 28 */
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  --leading-tight: 1.25;
+  --leading-normal: 1.55;
+
+  /* Spacing (4px grid) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /* Density-aware sizing */
+  --control-height: 2.25rem;
+  --control-height-sm: 1.875rem;
+  --row-padding-y: 0.75rem;
+  --page-padding-x: var(--space-10);
+  --page-padding-y: var(--space-8);
+
+  /* Radii */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-full: 999px;
+
+  /* Shadows — used sparingly (overlays only) */
+  --shadow-sm: 0 1px 2px rgba(28, 25, 23, 0.05);
+  --shadow-md: 0 4px 12px rgba(28, 25, 23, 0.08), 0 1px 3px rgba(28, 25, 23, 0.06);
+  --shadow-lg: 0 16px 40px rgba(28, 25, 23, 0.14), 0 2px 6px rgba(28, 25, 23, 0.06);
+
+  /* Focus */
+  --focus-ring: 0 0 0 2px var(--surface), 0 0 0 4px var(--accent);
+
+  /* Layout */
+  --sidebar-width: 232px;
+  --topbar-height: 56px;
+  --content-max-width: 1200px;
+
+  /* Motion */
+  --duration-fast: 120ms;
+  --duration-base: 180ms;
+  --duration-slow: 240ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Stacking */
+  --z-sticky: 10;
+  --z-drawer: 40;
+  --z-modal: 50;
+  --z-popover: 60;
+  --z-toast: 70;
+
+  color-scheme: light;
+}
+
+/* Dark theme — explicit selection or system preference */
+:root[data-theme='dark'] {
+  --bg-primary: #141413;
+  --bg-secondary: #191918;
+  --surface: #1d1c1b;
+  --surface-hover: #252422;
+  --surface-sunken: #171716;
+  --surface-overlay: rgba(0, 0, 0, 0.55);
+
+  --border: #302e2b;
+  --border-strong: #423f3b;
+  --divider: #292724;
+
+  --text-primary: #edebe8;
+  --text-secondary: #bcb7b0;
+  --text-muted: #948f88;
+  --text-inverse: #141413;
+
+  --accent: #8ab0f0;
+  --accent-hover: #a4c2f4;
+  --accent-soft: #1f2a3d;
+  --accent-border: #33466a;
+  --accent-text: #a4c2f4;
+
+  --success: #6fcf97;
+  --success-soft: #16291f;
+  --success-border: #274a36;
+  --warning: #f0b95a;
+  --warning-soft: #2e2413;
+  --warning-border: #4e3c1c;
+  --danger: #f28b82;
+  --danger-hover: #f5a39c;
+  --danger-soft: #331b19;
+  --danger-border: #5a2c28;
+  --neutral-soft: #262523;
+  --neutral-border: #3a3835;
+
+  --chart-bar: #7fa3e6;
+  --chart-bar-hover: #a4c2f4;
+  --chart-track: #262523;
+  --chart-high: #f08a5d;
+  --chart-medium: #e6b85c;
+  --chart-low: #7c7771;
+
+  --pii-aadhaar: #e0a15a;
+  --pii-aadhaar-vid: #f0925f;
+  --pii-pan: #8ab0f0;
+  --pii-passport: #b39cf0;
+  --pii-driving-license: #5cc8bb;
+  --pii-voter-id: #ef8aa6;
+  --pii-phone: #93cf72;
+  --pii-email: #5cc3dd;
+  --pii-name: #bcb7b0;
+  --pii-address: #d2a372;
+  --pii-date-of-birth: #c4a7e0;
+  --pii-aadhaar-enrolment: #dcb06a;
+  --pii-roll-number: #9bb8d6;
+  --pii-place-of-birth: #b9c77f;
+  --pii-identification-mark: #e09ab9;
+  --pii-photo: #b8a9e0;
+  --pii-qr-code: #8fc7b1;
+  --pii-signature: #d6b48f;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.55);
+
+  color-scheme: dark;
+}
+
+/* Compact density */
+:root[data-density='compact'] {
+  --control-height: 2rem;
+  --control-height-sm: 1.75rem;
+  --row-padding-y: 0.5rem;
+  --page-padding-y: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --page-padding-x: var(--space-6);
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --page-padding-x: var(--space-4);
+    --page-padding-y: var(--space-5);
+  }
+}
+
+/* PII category → color. Consumers read var(--pii-color). */
+[data-pii='AADHAAR'] {
+  --pii-color: var(--pii-aadhaar);
+}
+[data-pii='AADHAAR_VID'] {
+  --pii-color: var(--pii-aadhaar-vid);
+}
+[data-pii='PAN'] {
+  --pii-color: var(--pii-pan);
+}
+[data-pii='PASSPORT'] {
+  --pii-color: var(--pii-passport);
+}
+[data-pii='DRIVING_LICENSE'] {
+  --pii-color: var(--pii-driving-license);
+}
+[data-pii='VOTER_ID'] {
+  --pii-color: var(--pii-voter-id);
+}
+[data-pii='PHONE'] {
+  --pii-color: var(--pii-phone);
+}
+[data-pii='EMAIL'] {
+  --pii-color: var(--pii-email);
+}
+[data-pii='NAME'] {
+  --pii-color: var(--pii-name);
+}
+[data-pii='ADDRESS'] {
+  --pii-color: var(--pii-address);
+}
+[data-pii='DATE_OF_BIRTH'] {
+  --pii-color: var(--pii-date-of-birth);
+}
+[data-pii='AADHAAR_ENROLMENT'] {
+  --pii-color: var(--pii-aadhaar-enrolment);
+}
+[data-pii='ROLL_NUMBER'] {
+  --pii-color: var(--pii-roll-number);
+}
+[data-pii='PLACE_OF_BIRTH'] {
+  --pii-color: var(--pii-place-of-birth);
+}
+[data-pii='IDENTIFICATION_MARK'] {
+  --pii-color: var(--pii-identification-mark);
+}
+[data-pii='PHOTO'] {
+  --pii-color: var(--pii-photo);
+}
+[data-pii='QR_CODE'] {
+  --pii-color: var(--pii-qr-code);
+}
+[data-pii='SIGNATURE'] {
+  --pii-color: var(--pii-signature);
+}

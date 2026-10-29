@@ -1,0 +1,1449 @@
+{
+  "split": "dev",
+  "documents": 76,
+  "pages": 80,
+  "labelled_values": 613,
+  "labelled_visual": 12,
+  "distractors": 198,
+  "detector_version": "1.4.0+s14e877c15bfa+r0a6bede1",
+  "ner_model": "en_core_web_md-3.8.0",
+  "extraction": {
+    "total_ms": 18682,
+    "ms_per_page": 233.5
+  },
+  "experiments": {
+    "A": {
+      "name": "Rules only",
+      "options": {
+        "use_rules": true,
+        "use_context": false,
+        "use_ner": false,
+        "use_validation": false,
+        "min_confidence": 0.0
+      },
+      "overall": {
+        "tp": 450,
+        "fp": 182,
+        "fn": 163,
+        "precision": 0.712,
+        "recall": 0.7341,
+        "f1": 0.7229,
+        "false_negative_rate": 0.2659,
+        "false_positive_rate": 0.7475
+      },
+      "detection_ms_total": 58,
+      "detection_ms_per_page": 0.73,
+      "per_type": {
+        "AADHAAR": {
+          "tp": 90,
+          "fp": 69,
+          "fn": 1,
+          "precision": 0.566,
+          "recall": 0.989,
+          "f1": 0.72,
+          "false_negative_rate": 0.011
+        },
+        "AADHAAR_ENROLMENT": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "AADHAAR_VID": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 8,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "ADDRESS": {
+          "tp": 26,
+          "fp": 0,
+          "fn": 4,
+          "precision": 1.0,
+          "recall": 0.8667,
+          "f1": 0.9286,
+          "false_negative_rate": 0.1333
+        },
+        "DATE_OF_BIRTH": {
+          "tp": 51,
+          "fp": 21,
+          "fn": 0,
+          "precision": 0.7083,
+          "recall": 1.0,
+          "f1": 0.8293,
+          "false_negative_rate": 0.0
+        },
+        "DRIVING_LICENSE": {
+          "tp": 15,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "EMAIL": {
+          "tp": 45,
+          "fp": 2,
+          "fn": 3,
+          "precision": 0.9574,
+          "recall": 0.9375,
+          "f1": 0.9474,
+          "false_negative_rate": 0.0625
+        },
+        "IDENTIFICATION_MARK": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "NAME": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 134,
+          "precision": 1.0,
+          "recall": 0.0219,
+          "f1": 0.0429,
+          "false_negative_rate": 0.9781
+        },
+        "PAN": {
+          "tp": 87,
+          "fp": 19,
+          "fn": 0,
+          "precision": 0.8208,
+          "recall": 1.0,
+          "f1": 0.9016,
+          "false_negative_rate": 0.0
+        },
+        "PASSPORT": {
+          "tp": 22,
+          "fp": 28,
+          "fn": 0,
+          "precision": 0.44,
+          "recall": 1.0,
+          "f1": 0.6111,
+          "false_negative_rate": 0.0
+        },
+        "PHONE": {
+          "tp": 85,
+          "fp": 19,
+          "fn": 1,
+          "precision": 0.8173,
+          "recall": 0.9884,
+          "f1": 0.8947,
+          "false_negative_rate": 0.0116
+        },
+        "PLACE_OF_BIRTH": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "ROLL_NUMBER": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "VOTER_ID": {
+          "tp": 22,
+          "fp": 24,
+          "fn": 0,
+          "precision": 0.4783,
+          "recall": 1.0,
+          "f1": 0.6471,
+          "false_negative_rate": 0.0
+        }
+      },
+      "per_category": {
+        "aadhaar_letter": {
+          "tp": 8,
+          "fp": 4,
+          "fn": 12,
+          "precision": 0.6667,
+          "recall": 0.4,
+          "f1": 0.5,
+          "false_negative_rate": 0.6
+        },
+        "aadhaar_letter_scanned": {
+          "tp": 8,
+          "fp": 6,
+          "fn": 12,
+          "precision": 0.5714,
+          "recall": 0.4,
+          "f1": 0.4706,
+          "false_negative_rate": 0.6
+        },
+        "certificate": {
+          "tp": 3,
+          "fp": 2,
+          "fn": 18,
+          "precision": 0.6,
+          "recall": 0.1429,
+          "f1": 0.2308,
+          "false_negative_rate": 0.8571
+        },
+        "clean": {
+          "tp": 0,
+          "fp": 29,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0,
+          "false_negative_rate": null
+        },
+        "docx": {
+          "tp": 29,
+          "fp": 6,
+          "fn": 4,
+          "precision": 0.8286,
+          "recall": 0.8788,
+          "f1": 0.8529,
+          "false_negative_rate": 0.1212
+        },
+        "false_positive": {
+          "tp": 0,
+          "fp": 28,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0,
+          "false_negative_rate": null
+        },
+        "image": {
+          "tp": 14,
+          "fp": 1,
+          "fn": 4,
+          "precision": 0.9333,
+          "recall": 0.7778,
+          "f1": 0.8485,
+          "false_negative_rate": 0.2222
+        },
+        "image_ocr_noise": {
+          "tp": 15,
+          "fp": 0,
+          "fn": 3,
+          "precision": 1.0,
+          "recall": 0.8333,
+          "f1": 0.9091,
+          "false_negative_rate": 0.1667
+        },
+        "multi_hyphen": {
+          "tp": 24,
+          "fp": 8,
+          "fn": 6,
+          "precision": 0.75,
+          "recall": 0.8,
+          "f1": 0.7742,
+          "false_negative_rate": 0.2
+        },
+        "multi_mixedcase": {
+          "tp": 23,
+          "fp": 6,
+          "fn": 6,
+          "precision": 0.7931,
+          "recall": 0.7931,
+          "f1": 0.7931,
+          "false_negative_rate": 0.2069
+        },
+        "multi_plain": {
+          "tp": 24,
+          "fp": 7,
+          "fn": 6,
+          "precision": 0.7742,
+          "recall": 0.8,
+          "f1": 0.7869,
+          "false_negative_rate": 0.2
+        },
+        "multi_spaced": {
+          "tp": 24,
+          "fp": 8,
+          "fn": 6,
+          "precision": 0.75,
+          "recall": 0.8,
+          "f1": 0.7742,
+          "false_negative_rate": 0.2
+        },
+        "multi_split": {
+          "tp": 23,
+          "fp": 7,
+          "fn": 6,
+          "precision": 0.7667,
+          "recall": 0.7931,
+          "f1": 0.7797,
+          "false_negative_rate": 0.2069
+        },
+        "passport_scanned": {
+          "tp": 15,
+          "fp": 6,
+          "fn": 9,
+          "precision": 0.7143,
+          "recall": 0.625,
+          "f1": 0.6667,
+          "false_negative_rate": 0.375
+        },
+        "pdf_scanned": {
+          "tp": 21,
+          "fp": 0,
+          "fn": 4,
+          "precision": 1.0,
+          "recall": 0.84,
+          "f1": 0.913,
+          "false_negative_rate": 0.16
+        },
+        "pdf_text": {
+          "tp": 33,
+          "fp": 9,
+          "fn": 4,
+          "precision": 0.7857,
+          "recall": 0.8919,
+          "f1": 0.8354,
+          "false_negative_rate": 0.1081
+        },
+        "single": {
+          "tp": 6,
+          "fp": 10,
+          "fn": 0,
+          "precision": 0.375,
+          "recall": 1.0,
+          "f1": 0.5455,
+          "false_negative_rate": 0.0
+        },
+        "structured": {
+          "tp": 44,
+          "fp": 19,
+          "fn": 19,
+          "precision": 0.6984,
+          "recall": 0.6984,
+          "f1": 0.6984,
+          "false_negative_rate": 0.3016
+        },
+        "table": {
+          "tp": 108,
+          "fp": 24,
+          "fn": 36,
+          "precision": 0.8182,
+          "recall": 0.75,
+          "f1": 0.7826,
+          "false_negative_rate": 0.25
+        },
+        "visual_image": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.8333,
+          "f1": 0.9091,
+          "false_negative_rate": 0.1667
+        },
+        "visual_pdf": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.8333,
+          "f1": 0.9091,
+          "false_negative_rate": 0.1667
+        },
+        "visual_scanned": {
+          "tp": 8,
+          "fp": 2,
+          "fn": 4,
+          "precision": 0.8,
+          "recall": 0.6667,
+          "f1": 0.7273,
+          "false_negative_rate": 0.3333
+        }
+      }
+    },
+    "B": {
+      "name": "Rules + Context",
+      "options": {
+        "use_rules": true,
+        "use_context": true,
+        "use_ner": false,
+        "use_validation": false,
+        "min_confidence": 0.5
+      },
+      "overall": {
+        "tp": 595,
+        "fp": 6,
+        "fn": 18,
+        "precision": 0.99,
+        "recall": 0.9706,
+        "f1": 0.9802,
+        "false_negative_rate": 0.0294,
+        "false_positive_rate": 0.0202
+      },
+      "detection_ms_total": 138,
+      "detection_ms_per_page": 1.72,
+      "per_type": {
+        "AADHAAR": {
+          "tp": 91,
+          "fp": 4,
+          "fn": 0,
+          "precision": 0.9579,
+          "recall": 1.0,
+          "f1": 0.9785,
+          "false_negative_rate": 0.0
+        },
+        "AADHAAR_ENROLMENT": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "AADHAAR_VID": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "ADDRESS": {
+          "tp": 30,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "DATE_OF_BIRTH": {
+          "tp": 51,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "DRIVING_LICENSE": {
+          "tp": 15,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "EMAIL": {
+          "tp": 45,
+          "fp": 2,
+          "fn": 3,
+          "precision": 0.9574,
+          "recall": 0.9375,
+          "f1": 0.9474,
+          "false_negative_rate": 0.0625
+        },
+        "IDENTIFICATION_MARK": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "NAME": {
+          "tp": 122,
+          "fp": 0,
+          "fn": 15,
+          "precision": 1.0,
+          "recall": 0.8905,
+          "f1": 0.9421,
+          "false_negative_rate": 0.1095
+        },
+        "PAN": {
+          "tp": 87,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "PASSPORT": {
+          "tp": 22,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "PHONE": {
+          "tp": 86,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "PLACE_OF_BIRTH": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "ROLL_NUMBER": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "VOTER_ID": {
+          "tp": 22,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        }
+      },
+      "per_category": {
+        "aadhaar_letter": {
+          "tp": 20,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "aadhaar_letter_scanned": {
+          "tp": 20,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "certificate": {
+          "tp": 21,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "docx": {
+          "tp": 33,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "false_positive": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0,
+          "false_negative_rate": null
+        },
+        "image": {
+          "tp": 17,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.9444,
+          "recall": 0.9444,
+          "f1": 0.9444,
+          "false_negative_rate": 0.0556
+        },
+        "image_ocr_noise": {
+          "tp": 18,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "multi_hyphen": {
+          "tp": 27,
+          "fp": 0,
+          "fn": 3,
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.9474,
+          "false_negative_rate": 0.1
+        },
+        "multi_mixedcase": {
+          "tp": 26,
+          "fp": 0,
+          "fn": 3,
+          "precision": 1.0,
+          "recall": 0.8966,
+          "f1": 0.9455,
+          "false_negative_rate": 0.1034
+        },
+        "multi_plain": {
+          "tp": 27,
+          "fp": 0,
+          "fn": 3,
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.9474,
+          "false_negative_rate": 0.1
+        },
+        "multi_spaced": {
+          "tp": 27,
+          "fp": 0,
+          "fn": 3,
+          "precision": 1.0,
+          "recall": 0.9,
+          "f1": 0.9474,
+          "false_negative_rate": 0.1
+        },
+        "multi_split": {
+          "tp": 26,
+          "fp": 0,
+          "fn": 3,
+          "precision": 1.0,
+          "recall": 0.8966,
+          "f1": 0.9455,
+          "false_negative_rate": 0.1034
+        },
+        "passport_scanned": {
+          "tp": 24,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "pdf_scanned": {
+          "tp": 24,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.96,
+          "f1": 0.9796,
+          "false_negative_rate": 0.04
+        },
+        "pdf_text": {
+          "tp": 37,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "single": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "structured": {
+          "tp": 63,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "table": {
+          "tp": 144,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "visual_image": {
+          "tp": 12,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "visual_pdf": {
+          "tp": 12,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "visual_scanned": {
+          "tp": 11,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.9167,
+          "recall": 0.9167,
+          "f1": 0.9167,
+          "false_negative_rate": 0.0833
+        }
+      }
+    },
+    "C": {
+      "name": "NER only",
+      "options": {
+        "use_rules": false,
+        "use_context": false,
+        "use_ner": true,
+        "use_validation": false,
+        "min_confidence": 0.0
+      },
+      "overall": {
+        "tp": 130,
+        "fp": 18,
+        "fn": 483,
+        "precision": 0.8784,
+        "recall": 0.2121,
+        "f1": 0.3417,
+        "false_negative_rate": 0.7879,
+        "false_positive_rate": 0.0
+      },
+      "detection_ms_total": 563,
+      "detection_ms_per_page": 7.04,
+      "per_type": {
+        "AADHAAR": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 91,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "AADHAAR_ENROLMENT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "AADHAAR_VID": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 8,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "ADDRESS": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 30,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "DATE_OF_BIRTH": {
+          "tp": 16,
+          "fp": 0,
+          "fn": 35,
+          "precision": 1.0,
+          "recall": 0.3137,
+          "f1": 0.4776,
+          "false_negative_rate": 0.6863
+        },
+        "DRIVING_LICENSE": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 15,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "EMAIL": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 48,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "IDENTIFICATION_MARK": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "NAME": {
+          "tp": 114,
+          "fp": 18,
+          "fn": 23,
+          "precision": 0.8636,
+          "recall": 0.8321,
+          "f1": 0.8476,
+          "false_negative_rate": 0.1679
+        },
+        "PAN": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 87,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "PASSPORT": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 22,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "PHONE": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 86,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "PLACE_OF_BIRTH": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "ROLL_NUMBER": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "VOTER_ID": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 22,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_negative_rate": 1.0
+        }
+      },
+      "per_category": {
+        "aadhaar_letter": {
+          "tp": 6,
+          "fp": 3,
+          "fn": 14,
+          "precision": 0.6667,
+          "recall": 0.3,
+          "f1": 0.4138,
+          "false_negative_rate": 0.7
+        },
+        "aadhaar_letter_scanned": {
+          "tp": 5,
+          "fp": 6,
+          "fn": 15,
+          "precision": 0.4545,
+          "recall": 0.25,
+          "f1": 0.3226,
+          "false_negative_rate": 0.75
+        },
+        "certificate": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 21,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "docx": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 27,
+          "precision": 1.0,
+          "recall": 0.1818,
+          "f1": 0.3077,
+          "false_negative_rate": 0.8182
+        },
+        "image": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 13,
+          "precision": 1.0,
+          "recall": 0.2778,
+          "f1": 0.4348,
+          "false_negative_rate": 0.7222
+        },
+        "image_ocr_noise": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 15,
+          "precision": 1.0,
+          "recall": 0.1667,
+          "f1": 0.2857,
+          "false_negative_rate": 0.8333
+        },
+        "multi_hyphen": {
+          "tp": 7,
+          "fp": 1,
+          "fn": 23,
+          "precision": 0.875,
+          "recall": 0.2333,
+          "f1": 0.3684,
+          "false_negative_rate": 0.7667
+        },
+        "multi_mixedcase": {
+          "tp": 7,
+          "fp": 2,
+          "fn": 22,
+          "precision": 0.7778,
+          "recall": 0.2414,
+          "f1": 0.3684,
+          "false_negative_rate": 0.7586
+        },
+        "multi_plain": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 22,
+          "precision": 1.0,
+          "recall": 0.2667,
+          "f1": 0.4211,
+          "false_negative_rate": 0.7333
+        },
+        "multi_spaced": {
+          "tp": 9,
+          "fp": 0,
+          "fn": 21,
+          "precision": 1.0,
+          "recall": 0.3,
+          "f1": 0.4615,
+          "false_negative_rate": 0.7
+        },
+        "multi_split": {
+          "tp": 6,
+          "fp": 1,
+          "fn": 23,
+          "precision": 0.8571,
+          "recall": 0.2069,
+          "f1": 0.3333,
+          "false_negative_rate": 0.7931
+        },
+        "passport_scanned": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 23,
+          "precision": 1.0,
+          "recall": 0.0417,
+          "f1": 0.08,
+          "false_negative_rate": 0.9583
+        },
+        "pdf_scanned": {
+          "tp": 4,
+          "fp": 4,
+          "fn": 21,
+          "precision": 0.5,
+          "recall": 0.16,
+          "f1": 0.2424,
+          "false_negative_rate": 0.84
+        },
+        "pdf_text": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 31,
+          "precision": 1.0,
+          "recall": 0.1622,
+          "f1": 0.2791,
+          "false_negative_rate": 0.8378
+        },
+        "single": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 6,
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "false_negative_rate": 1.0
+        },
+        "structured": {
+          "tp": 15,
+          "fp": 1,
+          "fn": 48,
+          "precision": 0.9375,
+          "recall": 0.2381,
+          "f1": 0.3797,
+          "false_negative_rate": 0.7619
+        },
+        "table": {
+          "tp": 36,
+          "fp": 0,
+          "fn": 108,
+          "precision": 1.0,
+          "recall": 0.25,
+          "f1": 0.4,
+          "false_negative_rate": 0.75
+        },
+        "visual_image": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 9,
+          "precision": 1.0,
+          "recall": 0.25,
+          "f1": 0.4,
+          "false_negative_rate": 0.75
+        },
+        "visual_pdf": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 10,
+          "precision": 1.0,
+          "recall": 0.1667,
+          "f1": 0.2857,
+          "false_negative_rate": 0.8333
+        },
+        "visual_scanned": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 11,
+          "precision": 1.0,
+          "recall": 0.0833,
+          "f1": 0.1538,
+          "false_negative_rate": 0.9167
+        }
+      }
+    },
+    "D": {
+      "name": "Hybrid (Rules + Context + NER + Validation)",
+      "options": {
+        "use_rules": true,
+        "use_context": true,
+        "use_ner": true,
+        "use_validation": true,
+        "min_confidence": 0.5
+      },
+      "overall": {
+        "tp": 610,
+        "fp": 6,
+        "fn": 3,
+        "precision": 0.9903,
+        "recall": 0.9951,
+        "f1": 0.9927,
+        "false_negative_rate": 0.0049,
+        "false_positive_rate": 0.0202
+      },
+      "detection_ms_total": 662,
+      "detection_ms_per_page": 8.28,
+      "per_type": {
+        "AADHAAR": {
+          "tp": 91,
+          "fp": 4,
+          "fn": 0,
+          "precision": 0.9579,
+          "recall": 1.0,
+          "f1": 0.9785,
+          "false_negative_rate": 0.0
+        },
+        "AADHAAR_ENROLMENT": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "AADHAAR_VID": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "ADDRESS": {
+          "tp": 30,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "DATE_OF_BIRTH": {
+          "tp": 51,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "DRIVING_LICENSE": {
+          "tp": 15,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "EMAIL": {
+          "tp": 45,
+          "fp": 2,
+          "fn": 3,
+          "precision": 0.9574,
+          "recall": 0.9375,
+          "f1": 0.9474,
+          "false_negative_rate": 0.0625
+        },
+        "IDENTIFICATION_MARK": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "NAME": {
+          "tp": 137,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "PAN": {
+          "tp": 87,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "PASSPORT": {
+          "tp": 22,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "PHONE": {
+          "tp": 86,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "PLACE_OF_BIRTH": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "ROLL_NUMBER": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "VOTER_ID": {
+          "tp": 22,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        }
+      },
+      "per_category": {
+        "aadhaar_letter": {
+          "tp": 20,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "aadhaar_letter_scanned": {
+          "tp": 20,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "certificate": {
+          "tp": 21,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "docx": {
+          "tp": 33,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "false_positive": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0,
+          "false_negative_rate": null
+        },
+        "image": {
+          "tp": 17,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.9444,
+          "recall": 0.9444,
+          "f1": 0.9444,
+          "false_negative_rate": 0.0556
+        },
+        "image_ocr_noise": {
+          "tp": 18,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "multi_hyphen": {
+          "tp": 30,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "multi_mixedcase": {
+          "tp": 29,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "multi_plain": {
+          "tp": 30,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "multi_spaced": {
+          "tp": 30,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "multi_split": {
+          "tp": 29,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "passport_scanned": {
+          "tp": 24,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "pdf_scanned": {
+          "tp": 24,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1.0,
+          "recall": 0.96,
+          "f1": 0.9796,
+          "false_negative_rate": 0.04
+        },
+        "pdf_text": {
+          "tp": 37,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "single": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "structured": {
+          "tp": 63,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "table": {
+          "tp": 144,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "visual_image": {
+          "tp": 12,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "visual_pdf": {
+          "tp": 12,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "false_negative_rate": 0.0
+        },
+        "visual_scanned": {
+          "tp": 11,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.9167,
+          "recall": 0.9167,
+          "f1": 0.9167,
+          "false_negative_rate": 0.0833
+        }
+      }
+    }
+  },
+  "visual": {
+    "pages": 33,
+    "ms_per_page": 189.3,
+    "overall": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "false_negative_rate": 0.0
+    },
+    "per_type": {
+      "QR_CODE": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "false_negative_rate": 0.0
+      },
+      "SIGNATURE": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "false_negative_rate": 0.0
+      }
+    }
+  }
+}

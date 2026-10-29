@@ -1,0 +1,147 @@
+/* ---------- Bar list ---------- */
+.barList {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.barRow {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(96px, 150px) minmax(0, 1fr) 48px;
+  align-items: center;
+  gap: var(--space-4);
+  padding: 7px var(--space-2);
+  border-radius: var(--radius-sm);
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.barRow:hover {
+  background: var(--surface-hover);
+}
+
+.barLabel {
+  min-width: 0;
+  font-size: var(--text-sm);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.barTrack {
+  display: block;
+  height: 8px;
+}
+
+.bar {
+  display: block;
+  min-width: 2px;
+  height: 100%;
+  border-radius: 0 4px 4px 0;
+  background: var(--chart-bar);
+  transition:
+    width var(--duration-slow) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard);
+}
+
+.barRow:hover .bar {
+  background: var(--chart-bar-hover);
+}
+
+.barValue {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.barTooltip {
+  position: absolute;
+  bottom: calc(100% - 2px);
+  left: 50%;
+  z-index: var(--z-popover);
+  padding: 5px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  font-size: var(--text-xs);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, 2px);
+  transition:
+    opacity var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}
+
+.barRow:hover .barTooltip {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* ---------- Stacked bar ---------- */
+.stacked {
+  margin: 0;
+}
+
+.stackTrack {
+  display: flex;
+  gap: 2px;
+  height: 10px;
+  border-radius: 4px;
+  background: var(--chart-track);
+  overflow: hidden;
+}
+
+.stackSegment {
+  display: block;
+  flex-basis: 0;
+  min-width: 3px;
+  height: 100%;
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-6);
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--text-sm);
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.legendSwatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.legendLabel {
+  color: var(--text-secondary);
+}
+
+.legendValue {
+  font-weight: var(--weight-semibold);
+  font-variant-numeric: tabular-nums;
+}
+
+.legendShare {
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 480px) {
+  .barRow {
+    grid-template-columns: 96px minmax(0, 1fr) 40px;
+    gap: var(--space-3);
+  }
+}

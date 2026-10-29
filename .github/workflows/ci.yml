@@ -1,0 +1,58 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  backend:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: Backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: Backend/pyproject.toml
+      - name: Tesseract with English, Hindi and Telugu
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends tesseract-ocr tesseract-ocr-hin tesseract-ocr-tel
+      - name: Install
+        run: |
+          pip install -e ".[dev]"
+          pip install --no-deps "rapidocr_onnxruntime==1.4.4"
+          python -m spacy download en_core_web_sm
+      - name: Lint and types
+        run: |
+          ruff check app tests migrations
+          ruff format --check app tests migrations
+          mypy app
+      - name: Tests
+        env:
+          SPACY_MODEL: en_core_web_sm
+        run: pytest -q
+
+  frontend:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: Frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+          cache-dependency-path: Frontend/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm run format:check
+      - run: npm test
+      - run: npm run build

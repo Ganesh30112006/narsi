@@ -1,0 +1,62 @@
+/* Shared page-level composition. */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+.sectionPad {
+  padding-top: var(--space-4);
+}
+
+.twoColumn {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: var(--space-10);
+}
+
+.moreLink {
+  margin-top: var(--space-2);
+  margin-left: calc(-1 * var(--space-3));
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: var(--space-10);
+  align-items: start;
+}
+
+.aside {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.gapBelow {
+  margin-bottom: var(--space-5);
+}
+
+.gapAbove {
+  margin-top: var(--space-6);
+}
+
+.metaStrong {
+  font-size: var(--text-md);
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+}
+
+.outcome {
+  font-size: var(--text-md);
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+}
+
+@media (max-width: 1024px) {
+  .twoColumn,
+  .split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

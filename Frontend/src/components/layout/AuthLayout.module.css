@@ -1,0 +1,95 @@
+.page {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--surface);
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-10);
+  padding: var(--space-10) var(--space-12);
+  border-right: 1px solid var(--border);
+  background: var(--bg-secondary);
+}
+
+.introBody {
+  max-width: 440px;
+}
+
+.headline {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-semibold);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin: var(--space-8) 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--text-secondary);
+}
+
+.points li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.points svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--accent);
+}
+
+.footnote {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.formArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-10) var(--space-6);
+}
+
+.formInner {
+  width: 100%;
+  max-width: 360px;
+}
+
+.mobileBrand {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .intro {
+    display: none;
+  }
+
+  .formArea {
+    justify-content: flex-start;
+    padding-top: var(--space-12);
+  }
+
+  .mobileBrand {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    margin-bottom: var(--space-10);
+  }
+}

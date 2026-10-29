@@ -1,0 +1,14 @@
+{
+ "held_out_accuracy": 0.8886,
+ "pages": 350,
+ "C": 4.0,
+ "classes": [
+  "AADHAAR",
+  "CERTIFICATE",
+  "DRIVING_LICENSE",
+  "OTHER",
+  "PAN",
+  "PASSPORT",
+  "VOTER_ID"
+ ]
+}

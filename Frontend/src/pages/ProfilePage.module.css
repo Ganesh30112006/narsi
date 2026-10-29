@@ -1,0 +1,70 @@
+.identity {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-10);
+}
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-full);
+  background: var(--accent-soft);
+  color: var(--accent-text);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  flex-shrink: 0;
+}
+
+.name {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+}
+
+.email {
+  color: var(--text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--space-10);
+  margin-bottom: var(--space-10);
+}
+
+.pad {
+  padding-top: var(--space-4);
+}
+
+.permissions {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: var(--space-4) 0 0;
+  list-style: none;
+}
+
+.permissions li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-muted);
+}
+
+.permissions li[data-allowed='true'] {
+  color: var(--text-primary);
+}
+
+.permissions li[data-allowed='true'] svg {
+  color: var(--success);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

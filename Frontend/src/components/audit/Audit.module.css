@@ -1,0 +1,35 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+
+.userName {
+  font-weight: var(--weight-medium);
+}
+
+.userRole {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+}
+
+.details {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  overflow-wrap: anywhere;
+}
+
+.document {
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+}
+
+a.document:hover {
+  color: var(--accent-text);
+}

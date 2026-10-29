@@ -1,0 +1,44 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--text-primary);
+}
+
+.mark {
+  flex-shrink: 0;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.name {
+  font-weight: var(--weight-semibold);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.subtitle {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.sm .name {
+  font-size: var(--text-base);
+}
+
+.md .name {
+  font-size: var(--text-md);
+}
+
+.lg .name {
+  font-size: var(--text-lg);
+}
+
+.lg .subtitle {
+  font-size: var(--text-sm);
+}

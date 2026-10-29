@@ -1,0 +1,215 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.label {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--text-primary);
+}
+
+.optional {
+  margin-left: 4px;
+  font-weight: var(--weight-regular);
+  color: var(--text-muted);
+}
+
+.hint {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.error {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: var(--text-sm);
+  color: var(--danger);
+}
+
+.error svg {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.control {
+  width: 100%;
+  height: var(--control-height);
+  padding: 0 var(--space-3);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: var(--text-base);
+  transition:
+    border-color var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+.control::placeholder {
+  color: var(--text-muted);
+}
+
+.control:hover:not(:disabled) {
+  border-color: var(--text-muted);
+}
+
+.control:focus-visible,
+.control:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.control:disabled {
+  background: var(--surface-sunken);
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+.control[aria-invalid='true'] {
+  border-color: var(--danger);
+}
+
+.control[aria-invalid='true']:focus {
+  box-shadow: 0 0 0 3px var(--danger-soft);
+}
+
+textarea.control {
+  height: auto;
+  min-height: 88px;
+  padding: var(--space-2) var(--space-3);
+  line-height: var(--leading-normal);
+  resize: vertical;
+}
+
+.select {
+  appearance: none;
+  padding-right: 32px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23857f78' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  cursor: pointer;
+}
+
+.inputWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputWrap .control {
+  padding-right: 44px;
+}
+
+.inputAddon {
+  position: absolute;
+  right: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 28px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-muted);
+}
+
+.inputAddon:hover {
+  background: var(--surface-hover);
+  color: var(--text-primary);
+}
+
+.leadingIcon {
+  position: absolute;
+  left: 10px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.withLeadingIcon {
+  padding-left: 34px;
+}
+
+/* Checkbox */
+.checkbox {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  cursor: pointer;
+  font-size: var(--text-base);
+  color: var(--text-primary);
+}
+
+.checkbox input {
+  width: 16px;
+  height: 16px;
+  margin: 2px 0 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checkboxDescription {
+  display: block;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+/* Switch */
+.switchRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+
+.switchText {
+  min-width: 0;
+}
+
+.switch {
+  position: relative;
+  flex-shrink: 0;
+  width: 36px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--border-strong);
+  transition: background-color var(--duration-base) var(--ease-standard);
+}
+
+.switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-full);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--duration-base) var(--ease-standard);
+}
+
+.switch[aria-checked='true'] {
+  background: var(--accent);
+}
+
+.switch[aria-checked='true']::after {
+  transform: translateX(16px);
+}
+
+.switch:focus-visible {
+  box-shadow: var(--focus-ring);
+  border-radius: var(--radius-full);
+}
+
+.switch:disabled {
+  opacity: 0.5;
+}
